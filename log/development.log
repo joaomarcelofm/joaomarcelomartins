@@ -19,3 +19,21 @@
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4373051316486144390)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-12-15 15:31:11 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Started GET "/" for 127.0.0.1 at 2017-12-15 15:31:15 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 12509ms (Views: 12310.4ms)
+
+
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 8065ms (Views: 8062.4ms)
+
+
