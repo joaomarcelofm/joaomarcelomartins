@@ -37,3 +37,24 @@ Completed 200 OK in 12509ms (Views: 12310.4ms)
 Completed 200 OK in 8065ms (Views: 8062.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-15 16:01:13 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.1ms)
+Started GET "/" for 127.0.0.1 at 2017-12-15 16:01:16 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5546ms (Views: 5337.5ms)
+
+
+Completed 200 OK in 4141ms (Views: 4138.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-15 16:03:03 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2757ms (Views: 2754.7ms)
+
+
