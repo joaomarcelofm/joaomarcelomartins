@@ -1,1 +1,22 @@
 /* Main navbar */
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+img.nav-logo {
+  max-width: 80px;
+}
+
+.navbar-links {
+  font-family: "jura", Arial;;
+  font-weight: bold;
+  font-size: 25px;
+  align-self: center;
+  justify-content: flex-end;
+}
+
+.navbar-link {
+  padding-left: 15px;
+}

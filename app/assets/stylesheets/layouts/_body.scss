@@ -1,0 +1,21 @@
+html {
+  border: 20px solid $blue;
+}
+
+// links
+
+a {
+  color: #2727E6;
+  text-decoration: none;
+}
+
+a:hover {
+    color: #FF5252;
+    text-decoration: none;
+}
+
+// selected content
+
+::selection {
+  background: #FFA0A0;
+}
