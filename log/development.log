@@ -245,3 +245,158 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 3090ms (Views: 3088.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:22:46 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:22:50 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (102.8ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+[Webpacker] Compiling…
+Completed 200 OK in 8074ms (Views: 8072.1ms)
+
+
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 14160ms (Views: 13901.6ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2017-12-23 20:23:36 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.1.1) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:24:27 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 2821ms (Views: 2819.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:26:08 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 31ms (Views: 29.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:26:26 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 27.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:27:44 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1032.7ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 1063ms (Views: 1059.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:29:00 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.4ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+Completed 200 OK in 3097ms (Views: 3095.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:29:17 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 3020ms (Views: 3017.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:31:56 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 29ms (Views: 27.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:33:38 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.4ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 29ms (Views: 27.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:35:31 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+Completed 200 OK in 3034ms (Views: 3032.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:36:02 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 3162ms (Views: 3160.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:36:21 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 3017ms (Views: 3015.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:39:16 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 44ms (Views: 41.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-23 20:41:36 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 3044ms (Views: 3041.2ms)
+
+
