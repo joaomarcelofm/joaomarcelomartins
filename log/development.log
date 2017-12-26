@@ -492,3 +492,22 @@ Migrating to CreateProjects (20171224140556)
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4373051316486144390)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-12-26 14:24:44 -0200
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2017-12-26 14:24:48 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (11814.3ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+[Webpacker] Compiling…
+  Rendered pages/home.html.erb within layouts/application (9877.4ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 9918ms (Views: 9915.9ms | ActiveRecord: 0.0ms)
+
+
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 14435ms (Views: 14432.4ms | ActiveRecord: 0.0ms)
+
+
