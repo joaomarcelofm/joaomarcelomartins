@@ -522,3 +522,378 @@ Completed 200 OK in 14435ms (Views: 14432.4ms | ActiveRecord: 0.0ms)
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "client", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Project Title 3"], ["description", "Lorem ipsum dolor sit amet, ut qui sensibus contentiones, hinc inciderint et quo."], ["client", "LeWagon Bootcamp"], ["image", "project-1.png"], ["created_at", "2017-12-26 16:50:36.337383"], ["updated_at", "2017-12-26 16:50:36.337383"]]
   [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:00:51 -0200
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_project-card.html.erb (4.3ms)
+  Rendered pages/home.html.erb within layouts/application (8223.2ms)
+Completed 500 Internal Server Error in 8235ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div class="row">
+    2:   <div class="col-md-4">
+    3:     <%= @projects.each do |project| %>
+    4:     <a href="">
+    5:       <%= image_tag project.image %>
+    6:     </a>
+  
+app/views/shared/_project-card.html.erb:3:in `_app_views_shared__project_card_html_erb__652368760431957261_70111527798940'
+app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb__94468136006959664_70111483517100'
+Started PUT "/__web_console/repl_sessions/65a79c9528518e86a089bf945156547d" for 127.0.0.1 at 2017-12-26 15:01:07 -0200
+Started PUT "/__web_console/repl_sessions/65a79c9528518e86a089bf945156547d" for 127.0.0.1 at 2017-12-26 15:01:08 -0200
+Started PUT "/__web_console/repl_sessions/65a79c9528518e86a089bf945156547d" for 127.0.0.1 at 2017-12-26 15:01:12 -0200
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:02:39 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (38.5ms)
+  Rendered pages/home.html.erb within layouts/application (43.5ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 2118ms (Views: 2106.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:06:44 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (6.4ms)
+  Rendered pages/home.html.erb within layouts/application (11.1ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:08:16 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (5.8ms)
+  Rendered pages/home.html.erb within layouts/application (8.9ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:08:33 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (4.9ms)
+  Rendered pages/home.html.erb within layouts/application (8.6ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:10:14 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.7ms)
+  Rendered pages/home.html.erb within layouts/application (6.8ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:11:34 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.5ms)
+  Rendered pages/home.html.erb within layouts/application (7.1ms)
+  Rendered shared/_navbar.html.erb (7.0ms)
+Completed 200 OK in 113ms (Views: 110.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:11:47 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (5.4ms)
+  Rendered pages/home.html.erb within layouts/application (8.5ms)
+  Rendered shared/_navbar.html.erb (8.0ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:11:49 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (5.8ms)
+  Rendered pages/home.html.erb within layouts/application (9.2ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:12:26 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.2ms)
+  Rendered pages/home.html.erb within layouts/application (9.2ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:12:28 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (5.8ms)
+  Rendered pages/home.html.erb within layouts/application (10.7ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:12:33 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (5.0ms)
+  Rendered pages/home.html.erb within layouts/application (8.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:12:44 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (7.8ms)
+  Rendered pages/home.html.erb within layouts/application (10.7ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:12:58 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.9ms)
+  Rendered pages/home.html.erb within layouts/application (7.4ms)
+  Rendered shared/_navbar.html.erb (9.4ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:13:29 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.8ms)
+  Rendered pages/home.html.erb within layouts/application (7.7ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:16:08 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (6.1ms)
+  Rendered pages/home.html.erb within layouts/application (10.8ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:16:11 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.8ms)
+  Rendered pages/home.html.erb within layouts/application (5.5ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:17:12 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (4.8ms)
+  Rendered pages/home.html.erb within layouts/application (8.1ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:17:35 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.2ms)
+  Rendered pages/home.html.erb within layouts/application (6.0ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:17:37 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.7ms)
+  Rendered pages/home.html.erb within layouts/application (8.1ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:18:03 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.5ms)
+  Rendered pages/home.html.erb within layouts/application (7.9ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:18:05 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (4.5ms)
+  Rendered pages/home.html.erb within layouts/application (7.5ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:18:19 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.4ms)
+  Rendered pages/home.html.erb within layouts/application (6.6ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:18:49 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.2ms)
+  Rendered pages/home.html.erb within layouts/application (6.2ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:19:13 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.7ms)
+  Rendered pages/home.html.erb within layouts/application (6.0ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:22:15 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (6.2ms)
+  Rendered pages/home.html.erb within layouts/application (10.4ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:24:08 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.3ms)
+  Rendered pages/home.html.erb within layouts/application (6.8ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:24:29 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.7ms)
+  Rendered pages/home.html.erb within layouts/application (4.9ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:25:27 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (7.5ms)
+  Rendered pages/home.html.erb within layouts/application (16.0ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 98ms (Views: 94.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:25:32 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.0ms)
+  Rendered pages/home.html.erb within layouts/application (5.9ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:26:11 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (6.2ms)
+  Rendered pages/home.html.erb within layouts/application (9.7ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 3117ms (Views: 3114.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:26:59 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.8ms)
+  Rendered pages/home.html.erb within layouts/application (6.5ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 3046ms (Views: 3044.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:27:09 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (6.8ms)
+  Rendered pages/home.html.erb within layouts/application (13.6ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 3012ms (Views: 3006.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:28:00 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.3ms)
+  Rendered pages/home.html.erb within layouts/application (7.6ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 3499ms (Views: 3496.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:28:37 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.8ms)
+  Rendered pages/home.html.erb within layouts/application (5.2ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 3200ms (Views: 3197.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 15:29:25 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (6.7ms)
+  Rendered pages/home.html.erb within layouts/application (11.9ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 3472ms (Views: 3467.9ms | ActiveRecord: 0.8ms)
+
+
