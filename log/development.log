@@ -1083,3 +1083,146 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 3167ms (Views: 3164.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-26 16:45:03 -0200
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (14.6ms)
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (7.6ms)
+  Rendered shared/_social-links.html.erb (0.6ms)
+  Rendered pages/home.html.erb within layouts/application (8547.4ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 10519ms (Views: 10506.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 16:45:43 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (53.0ms)
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.9ms)
+  Rendered shared/_social-links.html.erb (3.5ms)
+  Rendered pages/home.html.erb within layouts/application (66.2ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 96ms (Views: 83.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 16:48:37 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.8ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.3ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (12.0ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 94ms (Views: 90.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 16:49:42 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.7ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.2ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (13.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 16:52:22 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.2ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.3ms)
+  Rendered shared/_social-links.html.erb (6.6ms)
+  Rendered pages/home.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial pages/_instagram, application/_instagram with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/app/views"
+):
+    25:   </svg>
+    26: </a>
+    27: <a href="">
+    28:   <%= render 'instagram' %>
+    29: </a>
+  
+app/views/shared/_social-links.html.erb:28:in `_app_views_shared__social_links_html_erb___1376576814068724045_70314674176600'
+app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb__2701961320352320955_70314674363360'
+Started GET "/" for 127.0.0.1 at 2017-12-26 16:52:37 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (4.5ms)
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (3.7ms)
+  Rendered shared/_social-links.html.erb (6.4ms)
+  Rendered pages/home.html.erb within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_instagram with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/app/views"
+):
+    25:   </svg>
+    26: </a>
+    27: <a href="">
+    28:   <%= render 'shared/instagram' %>
+    29: </a>
+  
+app/views/shared/_social-links.html.erb:28:in `_app_views_shared__social_links_html_erb___1376576814068724045_70314682232180'
+app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb__2701961320352320955_70314689794280'
+Started GET "/" for 127.0.0.1 at 2017-12-26 16:52:54 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (7.2ms)
+  [1m[36mBlogPost Load (1.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (3.2ms)
+  Rendered shared/_instagram.svg (5.2ms)
+  Rendered shared/_social-links.html.erb (10.0ms)
+  Rendered pages/home.html.erb within layouts/application (30.6ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 107ms (Views: 102.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 16:53:26 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (5.4ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.9ms)
+  Rendered shared/_social-links.html.erb (0.9ms)
+  Rendered pages/home.html.erb within layouts/application (18.0ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 73ms (Views: 69.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 16:53:38 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.1ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.2ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (9.4ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.5ms)
+
+
