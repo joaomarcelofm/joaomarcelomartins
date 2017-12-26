@@ -1,0 +1,16 @@
+.post-listing {
+  border-bottom: 1px solid $blue;
+
+  h3 {
+    color: $red;
+    font-family: "Jura";
+    font-weight: 700;
+    font-size: 26px;
+  }
+}
+
+.post-link {
+  color: $blue;
+  font-size: 16px;
+  text-align: right;
+}
