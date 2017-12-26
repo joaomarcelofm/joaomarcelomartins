@@ -1,0 +1,9 @@
+<% @posts.each do |post| %>
+<div class="post-listing">
+  <h3><%= post.title %></h3>
+  <p>
+    <%= post.intro %>
+  </p>
+  <span>Read more</span>
+</div>
+<% end %>
