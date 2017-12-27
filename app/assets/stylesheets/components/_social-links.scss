@@ -1,0 +1,12 @@
+a svg:hover #github,
+a svg:hover #twitter,
+a svg:hover #instagram {
+  fill: $red;
+}
+
+.social-links {
+  svg {
+    width: 60px;
+    margin: 20px;
+  }
+}
