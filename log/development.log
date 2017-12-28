@@ -1424,3 +1424,19 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 2912ms (Views: 2910.2ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-28 09:00:36 -0200
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (26.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (45.8ms)
+  [1m[36mBlogPost Load (13.7ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (22.5ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (9349.8ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 11845ms (Views: 11788.4ms | ActiveRecord: 50.9ms)
+
+
