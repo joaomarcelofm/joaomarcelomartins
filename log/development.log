@@ -2083,3 +2083,760 @@ Migrating to AddPicturesToProjects (20171228142519)
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4373051316486144390)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-12-28 12:31:28 -0200
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Project::AssetUploader):
+  
+app/models/project.rb:2:in `<class:Project>'
+app/models/project.rb:1:in `<top (required)>'
+app/controllers/pages_controller.rb:5:in `home'
+Started GET "/" for 127.0.0.1 at 2017-12-28 12:31:48 -0200
+Processing by PagesController#home as HTML
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `has_key?' for PhotoUploader:Class):
+  
+app/models/project.rb:2:in `<class:Project>'
+app/models/project.rb:1:in `<top (required)>'
+app/controllers/pages_controller.rb:5:in `home'
+Started GET "/" for 127.0.0.1 at 2017-12-28 12:34:57 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (31.3ms)
+  Rendered pages/home.html.erb within layouts/application (15710.4ms)
+Completed 500 Internal Server Error in 15728ms (ActiveRecord: 10.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Project:0x00007faa873a4da8>):
+    2:   <% @projects.each do |project| %>
+    3:   <div class="col-md-4">
+    4:     <div class="project-card">
+    5:       <%= image_tag project.image %>
+    6:       <h3><%= project.name %></h3>
+    7:       <p>
+    8:         <%= project.description %>
+  
+app/views/shared/_project-card.html.erb:5:in `block in _app_views_shared__project_card_html_erb___3436296199995933841_70185195367820'
+app/views/shared/_project-card.html.erb:2:in `_app_views_shared__project_card_html_erb___3436296199995933841_70185195367820'
+app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___3845586440798924140_70185172538980'
+Started GET "/" for 127.0.0.1 at 2017-12-28 12:35:27 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (15.9ms)
+  Rendered pages/home.html.erb within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Project:0x00007faa8e5ab618>):
+    2:   <% @projects.each do |project| %>
+    3:   <div class="col-md-4">
+    4:     <div class="project-card">
+    5:       <%= image_tag project.image %>
+    6:       <h3><%= project.name %></h3>
+    7:       <p>
+    8:         <%= project.description %>
+  
+app/views/shared/_project-card.html.erb:5:in `block in _app_views_shared__project_card_html_erb___3436296199995933841_70185254242600'
+app/views/shared/_project-card.html.erb:2:in `_app_views_shared__project_card_html_erb___3436296199995933841_70185254242600'
+app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___3845586440798924140_70185251544900'
+Started GET "/" for 127.0.0.1 at 2017-12-28 12:36:04 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (7.5ms)
+  Rendered pages/home.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Project:0x00007faa8feb2710>):
+    2:   <% @projects.each do |project| %>
+    3:   <div class="col-md-4">
+    4:     <div class="project-card">
+    5:       <!-- <%= image_tag project.image %> -->
+    6:       <h3><%= project.name %></h3>
+    7:       <p>
+    8:         <%= project.description %>
+  
+app/views/shared/_project-card.html.erb:5:in `block in _app_views_shared__project_card_html_erb___3436296199995933841_70185267922760'
+app/views/shared/_project-card.html.erb:2:in `_app_views_shared__project_card_html_erb___3436296199995933841_70185267922760'
+app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___3845586440798924140_70185263551600'
+Started GET "/" for 127.0.0.1 at 2017-12-28 12:36:06 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (6.8ms)
+  Rendered pages/home.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Project:0x00007faa8f4b1f68>):
+    2:   <% @projects.each do |project| %>
+    3:   <div class="col-md-4">
+    4:     <div class="project-card">
+    5:       <!-- <%= image_tag project.image %> -->
+    6:       <h3><%= project.name %></h3>
+    7:       <p>
+    8:         <%= project.description %>
+  
+app/views/shared/_project-card.html.erb:5:in `block in _app_views_shared__project_card_html_erb___3436296199995933841_70185262663500'
+app/views/shared/_project-card.html.erb:2:in `_app_views_shared__project_card_html_erb___3436296199995933841_70185262663500'
+app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___3845586440798924140_70185149850360'
+Started GET "/" for 127.0.0.1 at 2017-12-28 12:36:23 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (1.7ms)
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (7.7ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (16.6ms)
+  Rendered shared/_navbar.html.erb (3.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 1850ms (Views: 1845.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/management" for 127.0.0.1 at 2017-12-28 12:36:32 -0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_posts"[0m
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY "blog_posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (25.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (13.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.4ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (5.5ms)
+Completed 200 OK in 630ms (Views: 108.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/management/project?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 12:36:35 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (60.0ms)
+Completed 200 OK in 118ms (Views: 80.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/management/project/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 12:36:37 -0200
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (4.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (6.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (0.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (6.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (44.2ms)
+Completed 200 OK in 90ms (Views: 58.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/management/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 12:36:57 -0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_posts"[0m
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY "blog_posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (2.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (13.4ms)
+Completed 200 OK in 79ms (Views: 49.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/management/project?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 12:37:00 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (77.1ms)
+Completed 200 OK in 115ms (Views: 95.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/management/project/3/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 12:37:04 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (1.7ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (4.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (0.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (7.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (39.2ms)
+Completed 200 OK in 87ms (Views: 56.8ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/management/project/3/edit" for 127.0.0.1 at 2017-12-28 12:37:33 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vrpfQJFXe71sYJAqzh4p+T5MXiX0UKDRvHcs77oHA1zYmcQpr//HHfqYQXZI+Iix3PWD8Agnz/ZQ2DFJFFH5BQ==", "project"=>{"name"=>"Project Title 3", "description"=>"Lorem ipsum dolor sit amet, ut qui sensibus contentiones, hinc inciderint et quo.", "client"=>"LeWagon Bootcamp", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00007faa8f841548 @tempfile=#<Tempfile:/var/folders/2p/8b59s95s7hs56gpbt_432yt40000gn/T/RackMultipart20171228-5289-19agvuu.png>, @original_filename="project-1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[thumbnail]\"; filename=\"project-1.png\"\r\nContent-Type: image/png\r\n">, "thumbnail_cache"=>"", "main_image_cache"=>""}, "return_to"=>"http://localhost:3000/management/project", "_save"=>"", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "projects" SET "thumbnail" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["thumbnail", "robdrfzn9ypcaf0rxewj.png"], ["updated_at", "2017-12-28 14:37:33.106785"], ["id", 3]]
+  [1m[35m (19.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/project
+Completed 302 Found in 70ms (ActiveRecord: 20.9ms)
+
+
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 12:37:33 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (53.7ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.7ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.5ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.2ms)
+Completed 200 OK in 136ms (Views: 124.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/management/project/2/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 12:37:35 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (1.9ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (4.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (0.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (7.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (38.7ms)
+Completed 200 OK in 92ms (Views: 60.6ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/management/project/2/edit" for 127.0.0.1 at 2017-12-28 12:37:42 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EW9q8ISr8HtCVL0MWWZnxzqpqZsySuFsfe99t85bc5HM7qCKpblyNi5Bi4TCcaHbrXc8Sc9UFBSa6Yil1Z+CFg==", "project"=>{"name"=>"Project Title 2", "description"=>"Lorem ipsum dolor sit amet, ut qui sensibus contentiones, hinc inciderint et quo.", "client"=>"LeWagon Bootcamp", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00007faa8dcbe578 @tempfile=#<Tempfile:/var/folders/2p/8b59s95s7hs56gpbt_432yt40000gn/T/RackMultipart20171228-5289-kjz5ur.png>, @original_filename="project-1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[thumbnail]\"; filename=\"project-1.png\"\r\nContent-Type: image/png\r\n">, "thumbnail_cache"=>"", "main_image_cache"=>""}, "return_to"=>"http://localhost:3000/management/project", "_save"=>"", "model_name"=>"project", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "projects" SET "thumbnail" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["thumbnail", "ukonxizdlaaeqkprixmv.png"], ["updated_at", "2017-12-28 14:37:42.180813"], ["id", 2]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/project
+Completed 302 Found in 36ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 12:37:42 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (52.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.8ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (12.7ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.0ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.2ms)
+Completed 200 OK in 148ms (Views: 135.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/management/project/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 12:37:44 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (3.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (6.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (0.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (11.7ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (53.0ms)
+Completed 200 OK in 109ms (Views: 75.6ms | ActiveRecord: 2.3ms)
+
+
+Started PUT "/management/project/1/edit" for 127.0.0.1 at 2017-12-28 12:37:51 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dazoZfeykD0M0TewnTIn0uQJWxvCVIQx3ygMGzYnbhVvJ+RHweeCkyS15+1S+bloKdvRO2OileNOo6uTyvo12A==", "project"=>{"name"=>"Project Title", "description"=>"Lorem ipsum dolor sit amet, ut qui sensibus contentiones, hinc inciderint et quo.", "client"=>"LeWagon Bootcamp", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00007faa8a5a3480 @tempfile=#<Tempfile:/var/folders/2p/8b59s95s7hs56gpbt_432yt40000gn/T/RackMultipart20171228-5289-1907ud5.png>, @original_filename="project-1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[thumbnail]\"; filename=\"project-1.png\"\r\nContent-Type: image/png\r\n">, "thumbnail_cache"=>"", "main_image_cache"=>""}, "return_to"=>"http://localhost:3000/management/project", "_save"=>"", "model_name"=>"project", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "projects" SET "thumbnail" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["thumbnail", "optnu8sr1jr7nnmdsxyp.png"], ["updated_at", "2017-12-28 14:37:51.693651"], ["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/project
+Completed 302 Found in 36ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 12:37:51 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (45.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.7ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (6.5ms)
+Completed 200 OK in 127ms (Views: 113.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/management/project/3?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 12:37:53 -0200
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (5.7ms)
+Completed 200 OK in 68ms (Views: 20.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-28 12:38:12 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.5ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.3ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (11.7ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-28 12:38:16 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.4ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.3ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (9.4ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-28 13:09:50 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (6.0ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (2.1ms)
+  Rendered shared/_social-links.html.erb (1.1ms)
+  Rendered pages/home.html.erb within layouts/application (20.3ms)
+  Rendered shared/_navbar.html.erb (6.5ms)
+Completed 200 OK in 81ms (Views: 77.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/management" for 127.0.0.1 at 2017-12-28 13:15:56 -0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_posts"[0m
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY "blog_posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (39.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.1ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (9.0ms)
+Completed 200 OK in 167ms (Views: 136.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/management/project?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:15:59 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (70.5ms)
+Completed 200 OK in 134ms (Views: 92.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/management/project/3?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:16:01 -0200
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (7.2ms)
+Completed 200 OK in 61ms (Views: 30.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/management/project/3/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:16:06 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (8.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (0.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (10.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (51.1ms)
+Completed 200 OK in 102ms (Views: 69.5ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/management/project/3/edit" for 127.0.0.1 at 2017-12-28 13:16:23 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S51usnNBc4SuUpRm34goTl1jR3mFSYG0/zz6BlNFv+otvvXbTenPJDiqRTpZbokGv9qarHk+7pMTk+eg/RNFsw==", "project"=>{"name"=>"Project Title 3", "description"=>"Lorem ipsum dolor sit amet, ut qui sensibus contentiones, hinc inciderint et quo.", "client"=>"LeWagon Bootcamp", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00007faa8a3a0408 @tempfile=#<Tempfile:/var/folders/2p/8b59s95s7hs56gpbt_432yt40000gn/T/RackMultipart20171228-5289-uv0ck7.png>, @original_filename="project-1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[thumbnail]\"; filename=\"project-1.png\"\r\nContent-Type: image/png\r\n">, "remove_thumbnail"=>"1", "thumbnail_cache"=>"", "main_image_cache"=>""}, "return_to"=>"http://localhost:3000/management/project", "_save"=>"", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "projects" SET "thumbnail" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["thumbnail", nil], ["updated_at", "2017-12-28 15:16:23.348443"], ["id", 3]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/project
+Completed 302 Found in 1037ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 13:16:24 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (61.9ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (13.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.7ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.9ms)
+Completed 200 OK in 166ms (Views: 152.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/management/project/2/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:16:29 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.8ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (6.8ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (0.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (10.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (50.6ms)
+Completed 200 OK in 102ms (Views: 75.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/management/project/3/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:16:33 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (1.9ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (8.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (0.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (9.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (47.1ms)
+Completed 200 OK in 94ms (Views: 65.5ms | ActiveRecord: 2.6ms)
+
+
+Started PUT "/management/project/3/edit" for 127.0.0.1 at 2017-12-28 13:16:40 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7BX24DrCG7iO+mpvSawrr38ywGs0SEHc3IjAY+QLkO6KNm2JBGqnGBgCuzPPSornnYsdvsg/LvswJ93FSl1qtw==", "project"=>{"name"=>"Project Title 3", "description"=>"Lorem ipsum dolor sit amet, ut qui sensibus contentiones, hinc inciderint et quo.", "client"=>"LeWagon Bootcamp", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00007faa866afd78 @tempfile=#<Tempfile:/var/folders/2p/8b59s95s7hs56gpbt_432yt40000gn/T/RackMultipart20171228-5289-1q8hndg.png>, @original_filename="project-1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[thumbnail]\"; filename=\"project-1.png\"\r\nContent-Type: image/png\r\n">, "thumbnail_cache"=>"", "main_image_cache"=>""}, "return_to"=>"http://localhost:3000/management/project", "_save"=>"", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "projects" SET "thumbnail" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["thumbnail", "r5f4qzyooeiwayhgrn4z.png"], ["updated_at", "2017-12-28 15:16:40.932122"], ["id", 3]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/project
+Completed 302 Found in 36ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 13:16:40 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (62.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (13.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.1ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.0ms)
+Completed 200 OK in 159ms (Views: 146.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/management/project/3?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:16:43 -0200
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (9.2ms)
+Completed 200 OK in 61ms (Views: 30.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/management/project/3" for 127.0.0.1 at 2017-12-28 13:17:35 -0200
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/application
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/application (8.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (12.8ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (12.7ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.5ms)
+Completed 200 OK in 121ms (Views: 105.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/management/project/3/delete?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:17:39 -0200
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_delete_notice.html.haml (5.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (17.0ms)
+Completed 200 OK in 70ms (Views: 37.9ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/management/project/3/delete" for 127.0.0.1 at 2017-12-28 13:17:40 -0200
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ji/AyLaIw/WCAQ7H2mGrLEkpvb6thW5odlWDqXOJQShzFRYuDtFgLeNIQJaw12xCpMRWX1v/4qz7NVxynJ6rnA==", "return_to"=>"http://localhost:3000/management/project/3", "model_name"=>"project", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/project
+Completed 302 Found in 1207ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 13:17:42 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (44.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (12.8ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.8ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.6ms)
+Completed 200 OK in 131ms (Views: 119.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/management/project/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:17:44 -0200
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (4.9ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (0.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (8.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (44.1ms)
+Completed 200 OK in 93ms (Views: 67.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/management/project/new" for 127.0.0.1 at 2017-12-28 13:18:17 -0200
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t7PWwf9WdpahCOe6LfPRGe5iWGmksK+Op7LIFUAEdOGyaHnSbiTSj2OLBNR3llIiIeslbwbP8UwCL8KOgtB6dA==", "project"=>{"name"=>"Adding image", "description"=>"Test to see if image uploader will work.", "client"=>"Test image", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00007faa89a8ec48 @tempfile=#<Tempfile:/var/folders/2p/8b59s95s7hs56gpbt_432yt40000gn/T/RackMultipart20171228-5289-2b6a0r.png>, @original_filename="project-1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[thumbnail]\"; filename=\"project-1.png\"\r\nContent-Type: image/png\r\n">, "thumbnail_cache"=>"", "main_image_cache"=>""}, "return_to"=>"http://localhost:3000/management/project", "_save"=>"", "model_name"=>"project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.1ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "client", "created_at", "updated_at", "thumbnail") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Adding image"], ["description", "Test to see if image uploader will work."], ["client", "Test image"], ["created_at", "2017-12-28 15:18:17.584421"], ["updated_at", "2017-12-28 15:18:17.584421"], ["thumbnail", "kjab4xc5rky7cygcrw5m.png"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/project
+Completed 302 Found in 46ms (ActiveRecord: 19.8ms)
+
+
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 13:18:17 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (51.9ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.3ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (11.4ms)
+Completed 200 OK in 149ms (Views: 133.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/management/project/4?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:18:22 -0200
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (7.2ms)
+Completed 200 OK in 59ms (Views: 30.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/management/project?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:21:02 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 10.1ms)
+
+
+  
+NoMethodError (undefined method `has_key?' for :carrierwave:Symbol):
+  
+app/models/project.rb:2:in `<class:Project>'
+app/models/project.rb:1:in `<top (required)>'
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 13:21:03 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `has_key?' for :carrierwave:Symbol):
+  
+app/models/project.rb:2:in `<class:Project>'
+app/models/project.rb:1:in `<top (required)>'
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 13:21:14 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 3.6ms)
+
+
+  
+NoMethodError (undefined method `validate_integrity' for :carrierwave:Symbol):
+  
+app/models/project.rb:2:in `<class:Project>'
+app/models/project.rb:1:in `<top (required)>'
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 13:21:41 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 3.8ms)
+
+
+  
+NoMethodError (undefined method `field' for #<Class:0x00007faa8bdc9410>):
+  
+app/models/project.rb:5:in `<class:Project>'
+app/models/project.rb:1:in `<top (required)>'
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 13:24:11 -0200
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (84.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.7ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (12.7ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (11.1ms)
+Completed 200 OK in 2124ms (Views: 1541.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/management/project/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:24:16 -0200
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (3.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (6.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (0.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (21.5ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (63.7ms)
+Completed 200 OK in 130ms (Views: 82.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/management/project/new" for 127.0.0.1 at 2017-12-28 13:24:31 -0200
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pnT2yoKFp0SWh9mE1lBbN5ES30zo13BzauE2GL1mFlqjr1nZE/cDXVQEOuqMNdgMXpuiSkqoLrHPfDyDf7IYzw==", "project"=>{"name"=>"test image 22", "description"=>"312312312", "client"=>"32131", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00007fcad36fb210 @tempfile=#<Tempfile:/var/folders/2p/8b59s95s7hs56gpbt_432yt40000gn/T/RackMultipart20171228-6350-qi3ef3.png>, @original_filename="project-1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[thumbnail]\"; filename=\"project-1.png\"\r\nContent-Type: image/png\r\n">, "thumbnail_cache"=>"", "main_image_cache"=>""}, "return_to"=>"http://localhost:3000/management/project", "_save"=>"", "model_name"=>"project"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "client", "created_at", "updated_at", "thumbnail") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test image 22"], ["description", "312312312"], ["client", "32131"], ["created_at", "2017-12-28 15:24:31.227489"], ["updated_at", "2017-12-28 15:24:31.227489"], ["thumbnail", "efsldienqeqoe1ivv83m.png"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "projects" SET "thumbnail" = 'image/upload/v1514474674/efsldienqeqoe1ivv83m.jpg' WHERE "projects"."id" = $1[0m  [["id", 5]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/project
+Completed 302 Found in 3483ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/management/project" for 127.0.0.1 at 2017-12-28 13:24:34 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (72.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (10.7ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.6ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.1ms)
+Completed 200 OK in 186ms (Views: 172.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/management/project/5?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-28 13:24:37 -0200
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (8.1ms)
+Completed 200 OK in 76ms (Views: 43.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-28 13:24:41 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.4ms)
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (7.3ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (17.0ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 60ms (Views: 54.5ms | ActiveRecord: 2.6ms)
+
+

@@ -31,7 +31,6 @@ RailsAdmin.config do |config|
     # [...]
   end
 
-
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
