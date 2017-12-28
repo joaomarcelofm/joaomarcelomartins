@@ -16,6 +16,9 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
+
 gem 'devise'
 gem 'rails_admin', '~> 1.2'
 
