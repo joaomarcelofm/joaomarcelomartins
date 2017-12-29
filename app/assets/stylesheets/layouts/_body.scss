@@ -6,12 +6,12 @@ html {
 // links
 
 a {
-  color: #2727E6;
+  color: $blue;
   text-decoration: none;
 }
 
 a:hover {
-    color: #FF5252;
+    color: $red;
     text-decoration: none;
 }
 

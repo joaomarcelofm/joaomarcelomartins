@@ -1,0 +1,19 @@
+.project-display {
+  margin-top: 120px;
+
+  h1 {
+    font-size: 50px;
+    margin-top: 0px;
+  }
+
+  h2 {
+    color: $red;
+    font-family: "Jura";
+    font-weight: 700;
+    font-size: 26px;
+  }
+}
+
+.project-header {
+  border-bottom: 1px solid $blue;
+}

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="project-display">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-4">
+        <%= image_tag @project.main_image, style: "width: 100%" %>
+      </div>
+      <div class="col-md-6">
+        <div class="project-header">
+          <h1><%= @project.name %></h1>
+        </div>
+        <div class="project-content">
+          <h2>Client: <%= @project.client %></h2>
+          <p><%= @project.full_description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render 'shared/social-links' %>
+</div>
