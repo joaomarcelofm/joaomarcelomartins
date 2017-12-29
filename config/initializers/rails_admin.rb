@@ -46,4 +46,22 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  RailsAdmin.config do |config|
+    config.model Project do
+      edit do
+        field :name
+        field :client
+        field :description
+        field :thumbnail
+        field :main_image
+        field :full_description, :wysihtml5 do
+          config_options toolbar: { fa: true }, # use font-awesome instead of glyphicon
+                         html: true, # enables html editor
+                         parserRules: { tags: { p:1 } } # support for <p> in html mode
+        end
+      end
+    end
+  end
+
 end
