@@ -1,11 +1,11 @@
-<% @posts.each do |post| %>
+<% @posts.each do |blog_post| %>
 <div class="post-listing">
-  <h3><%= post.title %></h3>
+  <h3><%= blog_post.title %></h3>
   <p>
-    <%= post.intro %>
+    <%= blog_post.intro %>
   </p>
   <div class="post-link">
-    <span>Read more</span>
+    <%= link_to "Read More", blog_post_path(blog_post) %>
   </div>
 </div>
 <% end %>

@@ -8594,3 +8594,260 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 200 OK in 140ms (Views: 116.9ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:22:33 -0200
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+Started GET "/management" for 127.0.0.1 at 2017-12-29 15:22:35 -0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mProject Load (25.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (74.9ms)
+  [1m[36mBlogPost Load (2.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_post-listing.html.erb (30.7ms)
+  Rendered shared/_social-links.html.erb (0.8ms)
+  Rendered pages/home.html.erb within layouts/application (18718.3ms)
+  Rendered shared/_navbar.html.erb (6.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 20727ms (Views: 20671.8ms | ActiveRecord: 51.5ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_posts"[0m
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY "blog_posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (37.8ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (14.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (23.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.9ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (7.9ms)
+Completed 200 OK in 2689ms (Views: 139.0ms | ActiveRecord: 38.6ms)
+
+
+Started GET "/management/blog_post?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-29 15:22:58 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"blog_post"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY blog_posts.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (83.5ms)
+Completed 200 OK in 152ms (Views: 121.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/management/blog_post/2/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-29 15:23:02 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"blog_post", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (1.5ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 ORDER BY "blog_posts"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (3.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (12.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_wysihtml5.html.haml (9.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (8.7ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (70.8ms)
+Completed 200 OK in 126ms (Views: 99.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/management" for 127.0.0.1 at 2017-12-29 15:23:11 -0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_posts"[0m
+  [1m[36mBlogPost Load (0.7ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY "blog_posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (18.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.7ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (11.8ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.4ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (5.1ms)
+Completed 200 OK in 108ms (Views: 95.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:23:12 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.9ms)
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (2.2ms)
+  Rendered shared/_social-links.html.erb (0.7ms)
+  Rendered pages/home.html.erb within layouts/application (13.6ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:26:04 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (12.2ms)
+  Rendered shared/_post-listing.html.erb (0.6ms)
+  Rendered pages/home.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 2.9ms)
+
+
+  
+SyntaxError (/Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/app/views/shared/_post-listing.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._to "Read More" blog_posts_path(blog_posts) );@output_buffer...
+...                               ^):
+  
+app/views/shared/_post-listing.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pages/home.html.erb:16:in `_app_views_pages_home_html_erb__311567703885107769_70337505263620'
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:26:15 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.5ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (500.8ms)
+  Rendered pages/home.html.erb within layouts/application (509.4ms)
+Completed 500 Internal Server Error in 517ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `blog_posts' for #<#<Class:0x00007ff16beab6e0>:0x00007ff1743a49a0>
+Did you mean?  blog_post_url):
+     5:     <%= post.intro %>
+     6:   </p>
+     7:   <div class="post-link">
+     8:     <%= link_to "Read More", blog_posts_path(blog_posts) %>
+     9:   </div>
+    10: </div>
+    11: <% end %>
+  
+app/views/shared/_post-listing.html.erb:8:in `block in _app_views_shared__post_listing_html_erb__3749180613655369734_70337439955560'
+app/views/shared/_post-listing.html.erb:1:in `_app_views_shared__post_listing_html_erb__3749180613655369734_70337439955560'
+app/views/pages/home.html.erb:16:in `_app_views_pages_home_html_erb__311567703885107769_70337506912780'
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:26:57 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (4.2ms)
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (690.7ms)
+  Rendered pages/home.html.erb within layouts/application (700.3ms)
+Completed 500 Internal Server Error in 711ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `blog_post' for #<#<Class:0x00007ff16beab6e0>:0x00007ff1771029b0>
+Did you mean?  blog_post_url):
+     5:     <%= post.intro %>
+     6:   </p>
+     7:   <div class="post-link">
+     8:     <%= link_to "Read More", blog_posts_path(blog_post) %>
+     9:   </div>
+    10: </div>
+    11: <% end %>
+  
+app/views/shared/_post-listing.html.erb:8:in `block in _app_views_shared__post_listing_html_erb__3749180613655369734_70337518982560'
+app/views/shared/_post-listing.html.erb:1:in `_app_views_shared__post_listing_html_erb__3749180613655369734_70337518982560'
+app/views/pages/home.html.erb:16:in `_app_views_pages_home_html_erb__311567703885107769_70337530698340'
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:28:02 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.8ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (239.1ms)
+  Rendered pages/home.html.erb within layouts/application (245.9ms)
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `blog_posts_path' for #<#<Class:0x00007ff16beab6e0>:0x00007ff1758e4040>
+Did you mean?  blog_post_path):
+     5:     <%= post.intro %>
+     6:   </p>
+     7:   <div class="post-link">
+     8:     <%= link_to "Read More", blog_posts_path(post) %>
+     9:   </div>
+    10: </div>
+    11: <% end %>
+  
+app/views/shared/_post-listing.html.erb:8:in `block in _app_views_shared__post_listing_html_erb__3749180613655369734_70337516135020'
+app/views/shared/_post-listing.html.erb:1:in `_app_views_shared__post_listing_html_erb__3749180613655369734_70337516135020'
+app/views/pages/home.html.erb:16:in `_app_views_pages_home_html_erb__311567703885107769_70337518052820'
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:28:26 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.8ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (550.1ms)
+  Rendered pages/home.html.erb within layouts/application (560.3ms)
+Completed 500 Internal Server Error in 570ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `blog_post' for #<#<Class:0x00007ff16beab6e0>:0x00007ff173908bb8>
+Did you mean?  blog_post_url):
+     5:     <%= post.intro %>
+     6:   </p>
+     7:   <div class="post-link">
+     8:     <%= link_to "Read More", blog_post_path(blog_post) %>
+     9:   </div>
+    10: </div>
+    11: <% end %>
+  
+app/views/shared/_post-listing.html.erb:8:in `block in _app_views_shared__post_listing_html_erb__3749180613655369734_70337501401280'
+app/views/shared/_post-listing.html.erb:1:in `_app_views_shared__post_listing_html_erb__3749180613655369734_70337501401280'
+app/views/pages/home.html.erb:16:in `_app_views_pages_home_html_erb__311567703885107769_70337501350760'
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:28:36 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.7ms)
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.6ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (12.3ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+Completed 200 OK in 3077ms (Views: 3074.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:28:42 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered blog_posts/show.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (3.3ms)
+Completed 200 OK in 69ms (Views: 43.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:29:28 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.9ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.5ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (11.2ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:29:31 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered blog_posts/show.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.3ms)
+
+
