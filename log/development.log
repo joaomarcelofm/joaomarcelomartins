@@ -8851,3 +8851,431 @@ Processing by BlogPostsController#show as HTML
 Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:32:05 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered blog_posts/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="container">
+    2:   <div class="content-display">
+    3:     <h1><%= @blog_post.title %></h1>
+    4:   </div>
+    5:   <%= render 'shared/social-links' %>
+    6: </div>
+  
+app/views/blog_posts/show.html.erb:3:in `_app_views_blog_posts_show_html_erb___2362777293445466694_70337435273220'
+Started PUT "/__web_console/repl_sessions/a2ea70077dd0a282f0e7c48de4217f51" for 127.0.0.1 at 2017-12-29 15:32:16 -0200
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:33:31 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.4ms)
+  Rendered blog_posts/show.html.erb within layouts/application (2.0ms)
+  Rendered shared/_navbar.html.erb (4.7ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 7593ms (Views: 7521.1ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:35:11 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.6ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:35:21 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (22.9ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.6ms)
+  Rendered shared/_social-links.html.erb (0.7ms)
+  Rendered pages/home.html.erb within layouts/application (37.1ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+Completed 200 OK in 89ms (Views: 72.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/management" for 127.0.0.1 at 2017-12-29 15:35:22 -0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_posts"[0m
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY "blog_posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (16.6ms)
+Started GET "/blog_posts/2" for 127.0.0.1 at 2017-12-29 15:35:27 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (8.5ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.7ms)
+  Rendered blog_posts/show.html.erb within layouts/application (18.1ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 126ms (Views: 100.2ms | ActiveRecord: 21.1ms)
+
+
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.9ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (17.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.0ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.7ms)
+Completed 200 OK in 7446ms (Views: 7433.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/management/blog_post?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-29 15:36:11 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"blog_post"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY blog_posts.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (71.8ms)
+Completed 200 OK in 137ms (Views: 92.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/management/blog_post/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-29 15:36:13 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"blog_post", "id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.7ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 ORDER BY "blog_posts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (4.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_wysihtml5.html.haml (3.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (7.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (39.0ms)
+Completed 200 OK in 90ms (Views: 58.4ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/management/blog_post/1/edit" for 127.0.0.1 at 2017-12-29 15:36:50 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BSSfHQ0/MikUVPQGKLBqKrjUNHkf99TQ6myUGXXB/i0D8/jYNnulhqr+b4GX7Z2IY/A4RJNf01xc/ZFlvyFXBg==", "blog_post"=>{"title"=>"Blog Post 1", "intro"=>"Lorem ipsum dolor sit amet, ut qui sensibus contentiones, hinc inciderint et quo.", "banner_image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff174790848 @tempfile=#<Tempfile:/var/folders/2p/8b59s95s7hs56gpbt_432yt40000gn/T/RackMultipart20171229-7093-dltztx.jpg>, @original_filename="brooke-cagle-195777.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"blog_post[banner_image]\"; filename=\"brooke-cagle-195777.jpg\"\r\nContent-Type: image/jpeg\r\n">, "banner_image_cache"=>"", "content"=>"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue neque gravida in. At auctor urna nunc id. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. In nulla posuere sollicitudin aliquam. Sed risus ultricies tristique nulla aliquet enim. Purus in mollis nunc sed id. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Elit pellentesque habitant morbi tristique senectus et. Nulla facilisi nullam vehicula ipsum a. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. In vitae turpis massa sed elementum. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Arcu odio ut sem nulla pharetra diam sit amet nisl. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Euismod quis viverra nibh cras pulvinar mattis. Sed odio morbi quis commodo odio aenean sed. Enim ut tellus elementum sagittis.</p><p>Duis at tellus at urna condimentum mattis. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Bibendum neque egestas congue quisque egestas diam. Turpis egestas sed tempus urna et pharetra. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Habitant morbi tristique senectus et netus. Vehicula ipsum a arcu cursus vitae congue mauris. Eu mi bibendum neque egestas congue. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p><p>Vel elit scelerisque mauris pellentesque pulvinar pellentesque. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Vitae justo eget magna fermentum iaculis eu non diam. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Purus in massa tempor nec feugiat nisl pretium fusce id. Mollis aliquam ut porttitor leo a diam. Morbi leo urna molestie at. Arcu non odio euismod lacinia at quis risus sed. Sed elementum tempus egestas sed sed risus pretium. Imperdiet dui accumsan sit amet nulla. Netus et malesuada fames ac turpis egestas sed.</p><p>Magna fermentum iaculis eu non diam phasellus vestibulum lorem. Neque sodales ut etiam sit amet nisl purus in. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Eget sit amet tellus cras. Eget duis at tellus at urna condimentum mattis pellentesque id. Augue mauris augue neque gravida in fermentum et sollicitudin. Egestas egestas fringilla phasellus faucibus scelerisque. Bibendum neque egestas congue quisque egestas diam in. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Volutpat est velit egestas dui id. Arcu non odio euismod lacinia at quis risus. Nisl condimentum id venenatis a condimentum. Faucibus purus in massa tempor nec feugiat nisl pretium fusce.</p><p>Donec ac odio tempor orci dapibus ultrices in iaculis. Libero volutpat sed cras ornare arcu dui vivamus arcu. Tincidunt augue interdum velit euismod in pellentesque massa. Aliquam purus sit amet luctus venenatis lectus. Egestas sed tempus urna et pharetra. Facilisi etiam dignissim diam quis. Augue eget arcu dictum varius duis. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Lobortis elementum nibh tellus molestie nunc non blandit. Eget nullam non nisi est sit amet. Eu ultrices vitae auctor eu. Dictum varius duis at consectetur lorem donec massa sapien. At in tellus integer feugiat scelerisque varius. Amet consectetur adipiscing elit ut. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Aliquet risus feugiat in ante metus dictum at tempor commodo. Nunc consequat interdum varius sit amet mattis vulputate enim. Morbi tristique senectus et netus et. Vitae aliquet nec ullamcorper sit amet risus nullam eget felis. Eget egestas purus viverra accumsan in nisl.</p>"}, "_wysihtml5_mode"=>"1", "return_to"=>"http://localhost:3000/management/blog_post", "_save"=>"", "model_name"=>"blog_post", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 ORDER BY "blog_posts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.4ms)[0m  [1m[33mUPDATE "blog_posts" SET "banner_image" = $1, "content" = $2, "updated_at" = $3 WHERE "blog_posts"."id" = $4[0m  [["banner_image", "bph5rpnsto3zefa9owus.jpg"], ["content", "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue neque gravida in. At auctor urna nunc id. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. In nulla posuere sollicitudin aliquam. Sed risus ultricies tristique nulla aliquet enim. Purus in mollis nunc sed id. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Elit pellentesque habitant morbi tristique senectus et. Nulla facilisi nullam vehicula ipsum a. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. In vitae turpis massa sed elementum. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Arcu odio ut sem nulla pharetra diam sit amet nisl. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Euismod quis viverra nibh cras pulvinar mattis. Sed odio morbi quis commodo odio aenean sed. Enim ut tellus elementum sagittis.</p><p>Duis at tellus at urna condimentum mattis. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Bibendum neque egestas congue quisque egestas diam. Turpis egestas sed tempus urna et pharetra. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Habitant morbi tristique senectus et netus. Vehicula ipsum a arcu cursus vitae congue mauris. Eu mi bibendum neque egestas congue. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p><p>Vel elit scelerisque mauris pellentesque pulvinar pellentesque. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Vitae justo eget magna fermentum iaculis eu non diam. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Purus in massa tempor nec feugiat nisl pretium fusce id. Mollis aliquam ut porttitor leo a diam. Morbi leo urna molestie at. Arcu non odio euismod lacinia at quis risus sed. Sed elementum tempus egestas sed sed risus pretium. Imperdiet dui accumsan sit amet nulla. Netus et malesuada fames ac turpis egestas sed.</p><p>Magna fermentum iaculis eu non diam phasellus vestibulum lorem. Neque sodales ut etiam sit amet nisl purus in. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Eget sit amet tellus cras. Eget duis at tellus at urna condimentum mattis pellentesque id. Augue mauris augue neque gravida in fermentum et sollicitudin. Egestas egestas fringilla phasellus faucibus scelerisque. Bibendum neque egestas congue quisque egestas diam in. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Volutpat est velit egestas dui id. Arcu non odio euismod lacinia at quis risus. Nisl condimentum id venenatis a condimentum. Faucibus purus in massa tempor nec feugiat nisl pretium fusce.</p><p>Donec ac odio tempor orci dapibus ultrices in iaculis. Libero volutpat sed cras ornare arcu dui vivamus arcu. Tincidunt augue interdum velit euismod in pellentesque massa. Aliquam purus sit amet luctus venenatis lectus. Egestas sed tempus urna et pharetra. Facilisi etiam dignissim diam quis. Augue eget arcu dictum varius duis. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Lobortis elementum nibh tellus molestie nunc non blandit. Eget nullam non nisi est sit amet. Eu ultrices vitae auctor eu. Dictum varius duis at consectetur lorem donec massa sapien. At in tellus integer feugiat scelerisque varius. Amet consectetur adipiscing elit ut. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Aliquet risus feugiat in ante metus dictum at tempor commodo. Nunc consequat interdum varius sit amet mattis vulputate enim. Morbi tristique senectus et netus et. Vitae aliquet nec ullamcorper sit amet risus nullam eget felis. Eget egestas purus viverra accumsan in nisl.</p>"], ["updated_at", "2017-12-29 17:36:50.179916"], ["id", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "blog_posts" SET "banner_image" = 'image/upload/v1514569025/bph5rpnsto3zefa9owus.jpg' WHERE "blog_posts"."id" = $1[0m  [["id", 1]]
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/blog_post
+Completed 302 Found in 16355ms (ActiveRecord: 26.1ms)
+
+
+Started GET "/management/blog_post" for 127.0.0.1 at 2017-12-29 15:37:06 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"blog_post"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY blog_posts.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (82.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (24.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.8ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (6.3ms)
+Completed 200 OK in 204ms (Views: 191.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:37:13 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.6ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+Completed 200 OK in 40ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:38:07 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.9ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+Completed 200 OK in 46ms (Views: 39.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:38:36 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered blog_posts/show.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 42ms (Views: 36.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:39:09 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered blog_posts/show.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 42ms (Views: 36.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/management/blog_post/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-12-29 15:39:46 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"blog_post", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (3.0ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 ORDER BY "blog_posts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.6ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_file_upload.html.haml (7.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_wysihtml5.html.haml (4.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (8.0ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (42.4ms)
+Completed 200 OK in 91ms (Views: 64.2ms | ActiveRecord: 3.3ms)
+
+
+Started PUT "/management/blog_post/1/edit" for 127.0.0.1 at 2017-12-29 15:41:38 -0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bxmPbHwUJn+9yPKjmpRe3CFZVbjaxeHO47+Jk1Q1uuNpzuipR1Cx0ANiaSQlyal++n1ZhVZt5kJVLozvntUTyA==", "blog_post"=>{"title"=>"Blog Post 1", "intro"=>"Lorem ipsum dolor sit amet, ut qui sensibus contentiones, hinc inciderint et quo.", "remove_banner_image"=>"0", "banner_image_cache"=>"", "content"=>"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue neque gravida in. At auctor urna nunc id. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. In nulla posuere sollicitudin aliquam. Sed risus ultricies tristique nulla aliquet enim. Purus in mollis nunc sed id. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Elit pellentesque habitant morbi tristique senectus et. Nulla facilisi nullam vehicula ipsum a. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. In vitae turpis massa sed elementum. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Arcu odio ut sem nulla pharetra diam sit amet nisl. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Euismod quis viverra nibh cras pulvinar mattis. Sed odio morbi quis commodo odio aenean sed. Enim ut tellus elementum sagittis.</p><p>Duis at tellus at urna condimentum mattis. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Bibendum neque egestas congue quisque egestas diam. Turpis egestas sed tempus urna et pharetra. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Habitant morbi tristique senectus et netus. Vehicula ipsum a arcu cursus vitae congue mauris. Eu mi bibendum neque egestas congue. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p><p>Vel elit scelerisque mauris pellentesque pulvinar pellentesque. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Vitae justo eget magna fermentum iaculis eu non diam. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Purus in massa tempor nec feugiat nisl pretium fusce id. Mollis aliquam ut porttitor leo a diam. Morbi leo urna molestie at. Arcu non odio euismod lacinia at quis risus sed. Sed elementum tempus egestas sed sed risus pretium. Imperdiet dui accumsan sit amet nulla. Netus et malesuada fames ac turpis egestas sed.</p><p>Magna fermentum iaculis eu non diam phasellus vestibulum lorem. Neque sodales ut etiam sit amet nisl purus in. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Eget sit amet tellus cras. Eget duis at tellus at urna condimentum mattis pellentesque id. Augue mauris augue neque gravida in fermentum et sollicitudin. Egestas egestas fringilla phasellus faucibus scelerisque. Bibendum neque egestas congue quisque egestas diam in. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Volutpat est velit egestas dui id. Arcu non odio euismod lacinia at quis risus. Nisl condimentum id venenatis a condimentum. Faucibus purus in massa tempor nec feugiat nisl pretium fusce.</p><p><img alt=\"\" src=\"https://images.unsplash.com/photo-1470125634816-ede3f51bbb42?auto=format&amp;fit=crop&amp;w=2928&amp;q=80\"><br></p><p>Donec ac odio tempor orci dapibus ultrices in iaculis. Libero volutpat sed cras ornare arcu dui vivamus arcu. Tincidunt augue interdum velit euismod in pellentesque massa. Aliquam purus sit amet luctus venenatis lectus. Egestas sed tempus urna et pharetra. Facilisi etiam dignissim diam quis. Augue eget arcu dictum varius duis. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Lobortis elementum nibh tellus molestie nunc non blandit. Eget nullam non nisi est sit amet. Eu ultrices vitae auctor eu. Dictum varius duis at consectetur lorem donec massa sapien. At in tellus integer feugiat scelerisque varius. Amet consectetur adipiscing elit ut. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Aliquet risus feugiat in ante metus dictum at tempor commodo. Nunc consequat interdum varius sit amet mattis vulputate enim. Morbi tristique senectus et netus et. Vitae aliquet nec ullamcorper sit amet risus nullam eget felis. Eget egestas purus viverra accumsan in nisl.</p>"}, "_wysihtml5_mode"=>"1", "return_to"=>"http://localhost:3000/management/blog_post", "_save"=>"", "model_name"=>"blog_post", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.7ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 ORDER BY "blog_posts"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "blog_posts" SET "banner_image" = $1, "content" = $2, "updated_at" = $3 WHERE "blog_posts"."id" = $4[0m  [["banner_image", "image/upload/v1514569025/bph5rpnsto3zefa9owus.jpg"], ["content", "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac auctor augue mauris augue neque gravida in. At auctor urna nunc id. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. In nulla posuere sollicitudin aliquam. Sed risus ultricies tristique nulla aliquet enim. Purus in mollis nunc sed id. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Elit pellentesque habitant morbi tristique senectus et. Nulla facilisi nullam vehicula ipsum a. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. In vitae turpis massa sed elementum. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Arcu odio ut sem nulla pharetra diam sit amet nisl. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Euismod quis viverra nibh cras pulvinar mattis. Sed odio morbi quis commodo odio aenean sed. Enim ut tellus elementum sagittis.</p><p>Duis at tellus at urna condimentum mattis. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Bibendum neque egestas congue quisque egestas diam. Turpis egestas sed tempus urna et pharetra. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Habitant morbi tristique senectus et netus. Vehicula ipsum a arcu cursus vitae congue mauris. Eu mi bibendum neque egestas congue. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.</p><p>Vel elit scelerisque mauris pellentesque pulvinar pellentesque. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Vitae justo eget magna fermentum iaculis eu non diam. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Purus in massa tempor nec feugiat nisl pretium fusce id. Mollis aliquam ut porttitor leo a diam. Morbi leo urna molestie at. Arcu non odio euismod lacinia at quis risus sed. Sed elementum tempus egestas sed sed risus pretium. Imperdiet dui accumsan sit amet nulla. Netus et malesuada fames ac turpis egestas sed.</p><p>Magna fermentum iaculis eu non diam phasellus vestibulum lorem. Neque sodales ut etiam sit amet nisl purus in. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Eget sit amet tellus cras. Eget duis at tellus at urna condimentum mattis pellentesque id. Augue mauris augue neque gravida in fermentum et sollicitudin. Egestas egestas fringilla phasellus faucibus scelerisque. Bibendum neque egestas congue quisque egestas diam in. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Volutpat est velit egestas dui id. Arcu non odio euismod lacinia at quis risus. Nisl condimentum id venenatis a condimentum. Faucibus purus in massa tempor nec feugiat nisl pretium fusce.</p><p><img alt=\"\" src=\"https://images.unsplash.com/photo-1470125634816-ede3f51bbb42?auto=format&amp;fit=crop&amp;w=2928&amp;q=80\"><br></p><p>Donec ac odio tempor orci dapibus ultrices in iaculis. Libero volutpat sed cras ornare arcu dui vivamus arcu. Tincidunt augue interdum velit euismod in pellentesque massa. Aliquam purus sit amet luctus venenatis lectus. Egestas sed tempus urna et pharetra. Facilisi etiam dignissim diam quis. Augue eget arcu dictum varius duis. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Lobortis elementum nibh tellus molestie nunc non blandit. Eget nullam non nisi est sit amet. Eu ultrices vitae auctor eu. Dictum varius duis at consectetur lorem donec massa sapien. At in tellus integer feugiat scelerisque varius. Amet consectetur adipiscing elit ut. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Aliquet risus feugiat in ante metus dictum at tempor commodo. Nunc consequat interdum varius sit amet mattis vulputate enim. Morbi tristique senectus et netus et. Vitae aliquet nec ullamcorper sit amet risus nullam eget felis. Eget egestas purus viverra accumsan in nisl.</p>"], ["updated_at", "2017-12-29 17:41:38.162722"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/management/blog_post
+Completed 302 Found in 32ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/management/blog_post" for 127.0.0.1 at 2017-12-29 15:41:38 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"blog_post"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mBlogPost Load (0.7ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" ORDER BY blog_posts.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (64.3ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.1ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (14.4ms)
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.9ms)
+  Rendering /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/joaomarcelomartins/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (8.7ms)
+Completed 200 OK in 171ms (Views: 158.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:41:43 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.8ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 47ms (Views: 41.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:42:39 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.6ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+Completed 200 OK in 3377ms (Views: 3371.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:43:03 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered blog_posts/show.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+Completed 200 OK in 3138ms (Views: 3133.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:46:19 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.8ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (3.7ms)
+Completed 200 OK in 3473ms (Views: 3467.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:47:17 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.6ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+Completed 200 OK in 3153ms (Views: 3145.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:47:30 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.8ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 3299ms (Views: 3294.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:49:53 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.6ms)
+  Rendered blog_posts/show.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navbar.html.erb (3.4ms)
+Completed 200 OK in 3043ms (Views: 3038.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:50:09 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+Completed 200 OK in 3147ms (Views: 3142.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:50:40 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered blog_posts/show.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+Completed 200 OK in 2761ms (Views: 2756.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:51:10 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.5ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.6ms)
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered pages/home.html.erb within layouts/application (12.6ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+Completed 200 OK in 2920ms (Views: 2917.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blog_posts/2" for 127.0.0.1 at 2017-12-29 15:51:19 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.7ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:51:27 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.5ms)
+  Rendered blog_posts/show.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:53:25 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.9ms)
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (2.1ms)
+  Rendered shared/_social-links.html.erb (0.6ms)
+  Rendered pages/home.html.erb within layouts/application (13.3ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blog_posts/1" for 127.0.0.1 at 2017-12-29 15:53:28 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.6ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-29 15:54:02 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.0ms)
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (1.6ms)
+  Rendered shared/_social-links.html.erb (1.0ms)
+  Rendered pages/home.html.erb within layouts/application (12.2ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/10" for 127.0.0.1 at 2017-12-29 15:54:07 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.4ms)
+  Rendered projects/show.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
