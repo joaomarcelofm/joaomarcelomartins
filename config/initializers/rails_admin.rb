@@ -47,6 +47,8 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+  # Config settings for Project Model
+
   RailsAdmin.config do |config|
     config.model Project do
       edit do
@@ -56,6 +58,23 @@ RailsAdmin.config do |config|
         field :thumbnail
         field :main_image
         field :full_description, :wysihtml5 do
+          config_options toolbar: { fa: true }, # use font-awesome instead of glyphicon
+                         html: true, # enables html editor
+                         parserRules: { tags: { p:1 } } # support for <p> in html mode
+        end
+      end
+    end
+  end
+
+  # Config settings for BlogPosts Model
+
+  RailsAdmin.config do |config|
+    config.model BlogPost do
+      edit do
+        field :title
+        field :intro
+        field :banner_image
+        field :content, :wysihtml5 do
           config_options toolbar: { fa: true }, # use font-awesome instead of glyphicon
                          html: true, # enables html editor
                          parserRules: { tags: { p:1 } } # support for <p> in html mode
