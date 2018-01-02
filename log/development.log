@@ -10071,3 +10071,110 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-02 19:40:15 -0200
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (27.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (91.1ms)
+  [1m[36mBlogPost Load (25.8ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (38.1ms)
+  Rendered shared/_social-links.html.erb (2.8ms)
+  Rendered pages/home.html.erb within layouts/application (17672.4ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 19757ms (Views: 19685.0ms | ActiveRecord: 68.2ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-02 19:40:57 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-02 19:40:57 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.9ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+Completed 200 OK in 85ms (Views: 65.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 19:41:07 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (21.4ms)
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (18.8ms)
+  Rendered shared/_social-links.html.erb (1.0ms)
+  Rendered pages/home.html.erb within layouts/application (49.5ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+Completed 200 OK in 100ms (Views: 79.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-02 19:41:09 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-02 19:41:09 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.4ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 84ms (Views: 63.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-02 19:41:13 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.5ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 73ms (Views: 55.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-02 19:41:16 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-02 19:41:16 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.2ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 19:43:15 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (13.0ms)
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (10.0ms)
+  Rendered shared/_social-links.html.erb (1.0ms)
+  Rendered pages/home.html.erb within layouts/application (30.4ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+Completed 200 OK in 73ms (Views: 56.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-02 19:43:16 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+Completed 200 OK in 47ms (Views: 36.3ms | ActiveRecord: 2.1ms)
+
+
