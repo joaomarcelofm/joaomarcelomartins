@@ -31,6 +31,11 @@ RailsAdmin.config do |config|
     # [...]
   end
 
+  # logout option
+  config.current_user_method(&:current_user)
+
+  #
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
