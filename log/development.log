@@ -10235,3 +10235,282 @@ Completed 200 OK in 17353ms (Views: 17260.5ms | ActiveRecord: 89.4ms)
 Completed 200 OK in 34424ms (Views: 34322.5ms | ActiveRecord: 97.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-04 14:54:43 -0200
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (27.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (108.0ms)
+  [1m[36mBlogPost Load (27.9ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (56.9ms)
+  Rendered shared/_social-links.html.erb (1.8ms)
+  Rendered pages/home.html.erb within layouts/application (17518.3ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/public/packs
+Completed 200 OK in 19693ms (Views: 19593.5ms | ActiveRecord: 95.7ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-04 14:55:32 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (1.2ms)
+  Rendered projects/show.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+Completed 200 OK in 88ms (Views: 54.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-04 14:56:00 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/projects/9"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.1.1) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-04 14:56:14 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/projects/9"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.1.1) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pros/9" for 127.0.0.1 at 2018-01-04 14:56:20 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (1.9ms)
+  Rendered projects/show.html.erb within layouts/application (5.3ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 67ms (Views: 41.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 14:56:25 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (16.9ms)
+  Rendered pages/home.html.erb within layouts/application (20.5ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"projects", :name=>#<Project id: 9, name: "Yakitty-Yak", description: "Lorem ipsum dolor sit amet, ut qui sensibus conten...", client: "Le Wagon", created_at: "2017-12-29 13:42:02", updated_at: "2017-12-29 15:58:42", thumbnail: "image/upload/v1514554923/d9xlauduekfvhsv5ms48.png", main_image: "image/upload/v1514557024/ofh7o99qbirldf12toui.png", full_description: "<p>Lorem ipsum dolor sit amet, consectetur adipisc...">}, missing required keys: [:id]):
+    1: <div class="row">
+    2:   <% @projects.each do |project| %>
+    3:   <div class="col-md-4">
+    4:     <%= link_to project_path(project) do %>
+    5:     <div class="project-card">
+    6:       <%= image_tag project.thumbnail %>
+    7:       <% end %>
+  
+app/views/shared/_project-card.html.erb:4:in `block in _app_views_shared__project_card_html_erb__3934191083611094625_70185087380840'
+app/views/shared/_project-card.html.erb:2:in `_app_views_shared__project_card_html_erb__3934191083611094625_70185087380840'
+app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___1471426541764042261_70185162421180'
+Started GET "/" for 127.0.0.1 at 2018-01-04 14:56:36 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (13.6ms)
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (12.6ms)
+  Rendered shared/_social-links.html.erb (3.6ms)
+  Rendered pages/home.html.erb within layouts/application (46.3ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+Completed 200 OK in 95ms (Views: 76.9ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/projects/name/9" for 127.0.0.1 at 2018-01-04 14:56:38 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (0.9ms)
+  Rendered projects/show.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/name/9" for 127.0.0.1 at 2018-01-04 14:57:11 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/projects/name/9"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.1.1) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-04 14:57:16 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (18.7ms)
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (10.8ms)
+  Rendered shared/_social-links.html.erb (1.0ms)
+  Rendered pages/home.html.erb within layouts/application (36.1ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 81ms (Views: 60.7ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/blog/2" for 127.0.0.1 at 2018-01-04 14:57:19 -0200
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlogPost Load (1.9ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (1.0ms)
+  Rendered blog_posts/show.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+Completed 200 OK in 42ms (Views: 35.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 14:57:29 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (3.3ms)
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (2.1ms)
+  Rendered shared/_social-links.html.erb (1.4ms)
+  Rendered pages/home.html.erb within layouts/application (13.6ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 15:00:19 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (14.2ms)
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (13.6ms)
+  Rendered shared/_social-links.html.erb (1.0ms)
+  Rendered pages/home.html.erb within layouts/application (35.1ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 83ms (Views: 65.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-04 15:00:21 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"name"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=):
+  
+app/controllers/projects_controller.rb:15:in `set_project'
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-04 15:00:38 -0200
+  
+SyntaxError (/Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/config/routes.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  resources :blog_posts, only: [:show], path: 'blog'
+             ^
+/Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins/config/routes.rb:7: syntax error, unexpected ',', expecting keyword_end
+  resources :blog_posts, only: [:show], path: 'blog'
+                                       ^):
+  
+config/routes.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+config/routes.rb:7: syntax error, unexpected ',', expecting keyword_end
+Started GET "/projects/9" for 127.0.0.1 at 2018-01-04 15:00:45 -0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered shared/_social-links.html.erb (5.2ms)
+  Rendered projects/show.html.erb within layouts/application (14.2ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 81ms (Views: 53.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-04 15:00:48 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered shared/_project-card.html.erb (2.9ms)
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered shared/_post-listing.html.erb (13.1ms)
+  Rendered shared/_social-links.html.erb (1.3ms)
+  Rendered pages/home.html.erb within layouts/application (23.9ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 60ms (Views: 51.9ms | ActiveRecord: 2.9ms)
+
+
