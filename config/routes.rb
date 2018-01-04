@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/management', as: 'rails_admin'
-  devise_for :users, controllers: { registrations: "registrations"}
+  devise_for :users, controllers: { registrations: "registrations"},  path: '', path_names: { sign_in: 'login-manangement', sign_out: 'logout'}
+
   root to: 'pages#home'
 
   resources :projects, only: [:show]
