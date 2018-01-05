@@ -23,6 +23,8 @@ gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
 gem 'devise'
 gem 'rails_admin', '~> 1.2'
 
+gem 'newrelic_rpm'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
