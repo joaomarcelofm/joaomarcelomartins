@@ -9,8 +9,8 @@
           <h1><%= @project.name %></h1>
         </div>
         <div class="project-content">
-          <h2>Client: <%= @project.client %></h2>
-          <p><%=raw @project.full_description %></p>
+          <h2><%= @project.client %></h2>
+          <div class="project-desc"><%=raw @project.full_description %></div>
         </div>
       </div>
     </div>

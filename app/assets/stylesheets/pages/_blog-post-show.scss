@@ -1,5 +1,4 @@
 .post-display {
-
   h1 {
     margin-top: 120px;
     margin-bottom: 50px;
@@ -13,5 +12,9 @@
   margin-top: 40px;
   img {
     width: 100%;
+  }
+  h2 {
+    color: $red;
+    font-family: $body-font;
   }
 }
