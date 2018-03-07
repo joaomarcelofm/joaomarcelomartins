@@ -21,7 +21,7 @@ gem 'carrierwave', '~> 1.2'
 gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
 
 gem 'devise'
-gem 'rails_admin', '~> 1.2'
+gem 'rails_admin', '~> 1.3'
 
 gem 'newrelic_rpm'
 
