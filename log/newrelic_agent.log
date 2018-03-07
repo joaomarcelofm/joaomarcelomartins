@@ -147,3 +147,22 @@
 [2018-01-09 19:19:10 -0200 Joaos-MacBook-Pro.local (5376)] INFO : Doing deferred dependency-detection before Rack startup
 [2018-01-09 19:19:13 -0200 Joaos-MacBook-Pro.local (5376)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1837939/applications/101501119
 [2018-01-09 19:24:03 -0200 Joaos-MacBook-Pro.local (5376)] INFO : Starting Agent shutdown
+[2018-03-07 07:48:42 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Starting the New Relic agent version 4.7.1.340 in "development" environment.
+[2018-03-07 07:48:42 +0100 Joaos-MacBook-Pro.local (7903)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2018-03-07 07:48:42 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Reading configuration from config/newrelic.yml (/Users/joaomarcelomartins/code/joaomarcelofm/joaomarcelomartins)
+[2018-03-07 07:48:42 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Environment: development
+[2018-03-07 07:48:42 +0100 Joaos-MacBook-Pro.local (7903)] INFO : No known dispatcher detected.
+[2018-03-07 07:48:42 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Application: My Application (Development)
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing ActiveJob instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing ActiveRecord 5 instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing Net instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing deferred Rack::Builder instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing Rack::Builder middleware instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing Rails 3+ middleware instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing Redis Instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing Rails 5 Action Cable instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing Rails 5 Controller instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Installing Rails 5 view instrumentation
+[2018-03-07 07:48:43 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Finished instrumentation
+[2018-03-07 07:48:46 +0100 Joaos-MacBook-Pro.local (7903)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1837939/applications/101501119
+[2018-03-07 07:48:54 +0100 Joaos-MacBook-Pro.local (7927)] INFO : Starting Agent shutdown
